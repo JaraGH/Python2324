@@ -19,7 +19,7 @@ print(e)
 e = g.buscar(id=None, apellidos="Rosas")
 print(e)
 
-e = g.buscar(id=None, apellidos="Rosasrrrrrr")
+e = g.buscar(apellidos="Rosasrrrrrr", id=None)
 print(e)
 
 # eliminar por id

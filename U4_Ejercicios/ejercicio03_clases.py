@@ -36,7 +36,7 @@ class GestionEmpleados:
                 return empleado
         return -1
 
-    def buscar(self, id, apellidos):
+    def buscar(self, apellidos, id=None):
         if apellidos is not None:
             return self.b_apellido(apellidos)
         elif id is not None:

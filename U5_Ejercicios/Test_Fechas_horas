@@ -1,0 +1,251 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "61e73b82-b563-4111-97b5-06fb175f481d",
+   "metadata": {},
+   "source": [
+    "### Test fechas y horas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "afdb161b-7ca0-46c2-8e68-cd4a7e2fd55b",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import datetime"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "8377f519-e8f2-402d-a5c2-c6bde4f91b24",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.date(2023, 11, 16)"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Obtener la fecha actual\n",
+    "fecha_hoy = datetime.date.today()\n",
+    "fecha_hoy"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "f553b816-fd61-4e8c-aee1-93ed776b1f46",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.datetime(2023, 11, 16, 18, 41, 1, 627270)"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# fecha y hora\n",
+    "fecha_hora = datetime.datetime.now()\n",
+    "fecha_hora"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "e85d6862-5c76-4c6f-a58d-9aa023893f96",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.time(18, 41, 22, 157361)"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# hora actual\n",
+    "hora = datetime.datetime.now().time()\n",
+    "hora"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "c3829c47-c039-4c92-b8db-583a6b5abecb",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Crear fechas y horas\n",
+    "from datetime import date"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "fdbc28ad-7288-4f4b-8e3d-62b84a819d2b",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1990-12-01\n",
+      "22:33:44\n",
+      "2024-05-06 22:01:56\n"
+     ]
+    }
+   ],
+   "source": [
+    "una_fecha = date(1990, 12, 1)\n",
+    "una_hora = datetime.time(22, 33,44)\n",
+    "una_fecha_hora = datetime.datetime(2024, 5, 6, 22, 1, 56)\n",
+    "print(una_fecha)\n",
+    "print(una_hora)\n",
+    "print(una_fecha_hora)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "4be9e860-3699-4ad6-805b-237bf79e9bff",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.time"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(una_hora)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "d5333259-8b8d-4271-ac67-004f35cd9c63",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Importar las clases date, time y datetime\n",
+    "from datetime import date, time, datetime"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "34f44db4-8121-4364-a669-b14c3736d62a",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "fecha = date(1990, 10,11)\n",
+    "hora = time(10,1,1)\n",
+    "fecha_hora = datetime(2017, 1,1, 22, 10, 22)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "61db2c33-dd42-409a-bca1-4de45088ac61",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Año: 2023\n",
+      "Mes: 11\n",
+      "Día: 16\n",
+      "Hora: 19:01:24\n",
+      "Fecha y hora: 16/11/2023 19:01:24\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Formateo de fechas\n",
+    "import datetime\n",
+    "ahora = datetime.datetime.now()\n",
+    "print (f'Año: {ahora.strftime(\"%Y\")}')\n",
+    "print (f'Mes: {ahora.strftime(\"%m\")}')\n",
+    "print (f'Día: {ahora.strftime(\"%d\")}')\n",
+    "print (f'Hora: {ahora.strftime(\"%H:%M:%S\")}')\n",
+    "print (f'Fecha y hora: {ahora.strftime(\"%d/%m/%Y %H:%M:%S\")}')\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3a2b30ca-a093-4cf7-9e70-fe8a08f0a6dc",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
