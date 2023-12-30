@@ -1,0 +1,15 @@
+
+
+
+{% for sport in sports %}
+    <div class="sport">
+        <h2>{{ sport.name }}</h2>
+        <p>{{ sport.description }}</p>
+        <p>{{ sport.is_outdoor }}</p>
+        <p>{{ sport.origin }}</p>
+        {% if sport.image %}
+            <p><img src="{{ sport.image.url }}" alt="No image"></p>
+        {% endif %}
+    </div>
+{% endfor %}
+```

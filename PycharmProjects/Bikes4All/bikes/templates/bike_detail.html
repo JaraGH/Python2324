@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Bikes</title>
+
+
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container">
+            <div class="text-center mt-5">
+                {% block content %}
+                    <div class="responsive-table__container col-md-6">
+                        <table class="table .table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Bike detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- jinja2 Technique -->
+                                {% for key, value in bike.items %}
+                                    <tr class="{% cycle 'table-primary' 'table-secundary' %}">
+
+                                        <td class="align-right fw-bolder">{{ key }}</td>
+                                        <td>{{ value }}</td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td colspan="2" class="text-center">
+                                        <a href="{% url 'bike-edit' pk=id %}" class="btn btn-primary">Back</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,6 @@
+- base template and inherit from it. This is a very common pattern in Django.
+- ModelForm and use of widgets and helper
+- Edit  records
+- Use of BikeCreateView and BikeUpdateView
+- Login and logout
+- use of crispy forms

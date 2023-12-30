@@ -1,0 +1,40 @@
+{% load static %}
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Bare - Start Bootstrap Template</title>
+
+        <link href="{% static 'bootstrap5/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <script src="{% static 'bootstrap5/js/bootstrap.bundle.min.js' %}" ></script>
+
+
+
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="">Home</a>
+                <a class="navbar-brand" href="{% url 'list-all' %}">All bikes</a>
+                <a class="navbar-brand" href="{% url 'bike-create' %}">New bike</a>
+                <a class="navbar-brand" href="{% url 'list-top5' %}">Top 5 bikes by price</a>
+                <a class="navbar-brand" href="">City: XXXXX</a>
+                <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container">
+            <div class="text-center mt-5">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="{% static 'bootstrap5/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

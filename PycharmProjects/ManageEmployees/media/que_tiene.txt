@@ -1,0 +1,6 @@
+- static files and media files
+- form with image field
+- save image path in database
+- class-based views: get y post
+- show image in template
+- datepicker in form

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form class="form-signin" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <h2 class="form-signin-heading">Login</h2>
+
+        {{ form }}
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="{{ next }}" >¡Vamos!</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bikes 4 ALL</title>
+</head>
+<body>
+<p>New bike...</p>
+
+<form action="{% url 'bike-add' %}" method="post">
+    {% csrf_token %}
+    <label for="name">Nombre</label><br>
+    <input type="text" id="name" name="name"  value="Trek emonda"><br>
+    <label for="precio">Precio</label><br>
+    <input type="text" id="precio" name="precio" value="4500"><br>
+
+    <input type="submit" value="Add bike...">
+</form>
+
+</body>
+</html>
